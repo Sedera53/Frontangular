@@ -1,0 +1,58 @@
+
+
+
+
+  <div class="container-fluid page-body-wrapper">
+    <!-- partial:../../partials/_settings-panel.html -->
+    <!-- partial -->
+    <!-- partial:../../partials/_sidebar.html -->
+
+    <!-- partial -->
+    <div class="content-wrapper">
+      <div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Mode execution</h4>
+              <button mat-button class="btn btn-dark" (click)="openDialog1()">Ajouter Code Type</button>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Identifiant</th>
+                      <th>Designation</th>
+                      <th>   </th>
+                      <th>   </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Utiliser *ngFor pour créer une ligne pour chaque élément -->
+                    <tr *ngFor="let modeexecution of modeexecutions">
+                      <td>{{modeexecution.modeexecution}}</td>
+                      <td>{{modeexecution.designation}}</td>
+                      <td>
+                        <button type="button" class="btn btn-primary" (click)="onButtonClick(modeexecution?.modeexecution ?? '')">Modifier</button>
+                      </td>
+
+                      <td><button type="button" class="btn btn-danger">Supprimer</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--<button type="button" class="btn btn-dark" routerLink="/add">Ajouter Mode d'éxecution</button>-->
+    </div>
+  <!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+<!-- plugins:js -->
+<footer class="footer">
+  <div class="d-sm-flex justify-content-center justify-content-sm-between">
+    <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash.</span>
+    <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2021. All rights reserved.</span>
+  </div>
+</footer>
+

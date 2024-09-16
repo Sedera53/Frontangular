@@ -1,0 +1,12 @@
+<form class="forms-sample" (ngSubmit)="savecodetype()">
+  <div class="form-group me-3">
+    <label for="modeexecution">Identifiant</label>
+    <input class="form-control" type="text" id="modeexecution" [(ngModel)]="codetype.codetype" name="modeexecution">
+  </div>
+  <div class="form-group">
+    <label for="designation">Désignation</label>
+    <input class="form-control" type="text" id="designation" [(ngModel)]="codetype.designation" name="designation">
+  </div>
+  <button type="submit" class="btn btn-primary me-2" (click)="onNoClick()">Submit</button>
+  <button type="button" class="btn btn-secondary" (click)="onNoClick()">Annuler</button>
+</form>

@@ -1,0 +1,9 @@
+<form class="forms-sample" (ngSubmit)="saveCompte()">
+
+  <div class="form-group">
+    <label for="designation">Désignation</label>
+    <input class="form-control" type="text" id="designation" [(ngModel)]="compte.designation" name="designation">
+  </div>
+  <button type="submit" class="btn btn-primary me-2" (click)="onNoClick()">Submit</button>
+  <button type="button" class="btn btn-secondary" (click)="onNoClick()">Annuler</button>
+</form>
